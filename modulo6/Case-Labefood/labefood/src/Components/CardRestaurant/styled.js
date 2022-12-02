@@ -9,7 +9,9 @@ export const ContainerCardRestaurant = styled.div`
 
 export const ImageRestaurant = styled.img`
     width: 100%;
-    height: 7.5rem;
+    height: 15rem;
+    margin: 0 0 12px;
+    object-fit: fill;
 `
 
 export const NameRestaurant = styled.h3`
@@ -21,11 +23,13 @@ export const NameRestaurant = styled.h3`
     line-height: normal;
     letter-spacing: -0.39px;
     color: #e86e5a;
+    padding: 1%;
 `
 
 export const BoxInformTimePrice = styled.div`
     display: flex;
     justify-content: space-between;
+    padding: 1%;
 `
 
 export const InformTimePrice = styled.p`

@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
-import { Main, Form, ButtonStyled, DivPassword, ImputMaterial } from './styled'
-import { IconButton } from '@mui/material'
+import { Main, Form, ButtonStyled, DivPassword, ImputMaterial, Title } from './styled'
+import { Button, IconButton } from '@mui/material'
 import Visibility from '@mui/icons-material/Visibility'
 import VisibilityOff from '@mui/icons-material/VisibilityOff'
 import axios from 'axios'
 import {BASE_URL} from '../../Constants/url'
 import { useNavigate } from 'react-router-dom'
-import { goToFeed } from '../../Routes/coordinator'
+import { goToFeed, goToSignUp } from '../../Routes/coordinator'
+import Logo from '../../Components/Logo/Logo'
 
 
 const Login = () => {
@@ -62,7 +63,8 @@ const Login = () => {
 
     return (
         <Main>
-            <p>Entrar</p>
+            <Logo />
+            <Title>Entrar</Title>
             <Form onSubmit={onSubmitLogin}>
                 <ImputMaterial
                     error={checkErrEmail}
@@ -101,6 +103,9 @@ const Login = () => {
                     Entrar
                 </ButtonStyled>
             </Form>
+            <Title>
+                Não possui cadastro<Button onClick={()=>goToSignUp(navigate)} >clique aqui</Button>
+            </Title>
         </Main>
     )
 }

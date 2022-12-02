@@ -6,18 +6,22 @@ import Feed from '../Pages/Feed/feed'
 import Restaurant from '../Pages/Restaurant/restaurant'
 import Cart from '../Pages/Cart/cart'
 import Profile from '../Pages/Profile/profile'
+import ProfileEdit from '../Pages/ProfileEdit/profileEdit'
+import AddressEdit from '../Pages/AddressEdit/addressEdit'
 
 const Router = () => {
     return(
         <BrowserRouter>
             <Routes>
-                <Route index element={<Login/>}/>
+                <Route index element={<Feed/>}/>
                 <Route path='/signUp' element={<SignUp/>}/>
                 <Route path='/signUp/address' element={<SignUpAddress/>}/>
-                <Route path='/feed' element={<Feed/>}/>
+                <Route path='/addressEdit/:id' element={<AddressEdit/>}/>
+                <Route path='/login' element={<Login/>}/>
                 <Route path='/feed/:restaurantId' element={<Restaurant/>}/>
-                <Route path='/cart' element={<Cart/>}/>
                 <Route path='/profile' element={<Profile/>}/>
+                <Route path='/profile/:id' element={<ProfileEdit/>}/>
+                <Route path='/cart' element={<Cart/>}/>
             </Routes>
         </BrowserRouter>
     )

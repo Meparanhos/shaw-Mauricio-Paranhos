@@ -27,7 +27,7 @@ export const ButtonStyled = styled(Button)`
     &&{
         color: #000;
         width: 100%;
-        background-color: #E8222E;
+        background-color: #e86e5a;
         margin-top: 5px;
     }
     `
@@ -41,6 +41,20 @@ export const DivPassword = styled.div`
     }
     `
 
-    export const ImputMaterial = styled(TextField)`
-        width: 100%;
-    `
+export const ImputMaterial = styled(TextField)`
+    width: 100%;
+`
+
+export const Title = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Roboto;
+    font-size: 1.2rem;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -0.39px;
+    padding-bottom: 0.25rem;
+`
